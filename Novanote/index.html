@@ -1,31 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="styles.css">
     <title>Novanote</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-
 <body>
-    <div class="mainDiv">
-        <h1>Novanote</h1>
-
-        <div class="center-image">
-            <img src="./assets/menu.png" alt="Center image">
-        </div>
-
-        <button id="start-btn"><a href="dashboard.html">START</a></button>
-    </div>
-
-    <script>
-        const startBtn = document.getElementById("start-btn");
-        startBtn.addEventListener("click", () => {
-            window.electronAPI.loadPage("dashboard.html");
-        })
-    </script>
+    <div id="app"></div>
+    <script src="app.js"></script>
 </body>
-
 </html>
