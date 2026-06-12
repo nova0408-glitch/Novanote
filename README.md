@@ -27,7 +27,7 @@ Novanote helps you stay focused and intentional every day by combining task mana
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/novanote.git
+git clone https://github.com/nova0408-glitch/novanote.git
 cd novanote
 
 # Install dependencies
