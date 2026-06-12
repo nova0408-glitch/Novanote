@@ -1,41 +1,39 @@
-## Novanote
+# 🌱 Novanote
 
-![design image](https://github.com/user-attachments/assets/ff506f03-9aeb-4eec-a86e-374c3f80aa0a)
+A beautiful, simple, and effective **daily productivity app** built with Electron. Track your tasks, write daily reflections, and review your progress over time.
 
-Novanote is a one-week project I created to kickstart my productive coding journey. It's a real-time updating to-do list
-featuring custom-designed UI elements. This project not only helped me refresh my javaScript skills but also reinforced my
-understanding of fundamentals methods and data structures.
-### It was build with...
-* HTML
-* CSS
-* JavaScript
-* ElectronJS
+![Novanote Screenshot](https://via.placeholder.com/640x400?text=Novanote+Screenshot)
 
+## ✨ Features
 
+- **Daily Task Manager** — Unlimited tasks with check, edit, and delete
+- **Daily Notes / Journal** — Write reflections that are automatically saved
+- **Progress Tracking** — Real-time progress bar
+- **History Viewer** — Browse all past days with progress summary
+- **Persistent Storage** — Your data is safely saved locally
+- **Pixel Art Aesthetic** — Clean, motivational retro design
+- **Keyboard Friendly** — Press `Enter` to add tasks
 
-## Usage
+## 🚀 How to Use
 
-To run the application, run the command ```npm start```
-In this application you can create tasks, by writing it in the text field, then clicking the "+" button. It will appear on the
-to-do list displayed below the date and the input field, and you'll be able to click on it once you got it done to strikethrough
-the line. It will update automatically your progression bar, that updates its value according to the number of tasks you put, and
-the number of tasks you finished.
+1. Click **"START TODAY"** to begin your daily tasks
+2. Add tasks, mark them complete, and write notes
+3. Click **"FINISH DAY"** to save and see your summary
+4. View your past performance in **"VIEW HISTORY"**
 
-![to-do list visualization](https://github.com/user-attachments/assets/90c264ea-229a-418a-8603-c8b7d30647a6)
+## 🛠️ Installation & Development
 
-Once you're done, click on the finish button to get your daily achievement score!
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v16 or higher)
 
-## Contributing Guidelines
+### Setup
+```bash
+# Clone the repo
+git clone https://github.com/yourusername/novanote.git
+cd novanote
 
-1. Fork the project
-2. Create a feature branch (```git checkout -b ...```)
-3. Commit your changes (```git commit -m "..."```)
-4. Push to the branch (```git push origin ...```)
-5. Open a pull request
+# Install dependencies
+npm install
 
-### Main contributors
-Nobody contributed yet ;(
-
-## Contact
-<b>email: leverianbeatus@gmail.com<b>
-
+# Run in development mode
+npm start
