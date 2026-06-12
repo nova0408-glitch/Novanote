@@ -2,8 +2,6 @@
 
 A beautiful, simple, and effective **daily productivity app** built with Electron. Track your tasks, write daily reflections, and review your progress over time.
 
-![Novanote Screenshot](https://via.placeholder.com/640x400?text=Novanote+Screenshot)
-
 ## ✨ Features
 
 - **Daily Task Manager** — Unlimited tasks with check, edit, and delete
@@ -29,7 +27,7 @@ A beautiful, simple, and effective **daily productivity app** built with Electro
 ### Setup
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/novanote.git
+git clone https://github.com/nova0408-glitch/novanote.git
 cd novanote
 
 # Install dependencies
