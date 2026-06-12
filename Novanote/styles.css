@@ -319,3 +319,57 @@ body {
 .show {
     display: block !important;
 }
+.home-buttons button {
+    margin: 10px;
+    padding: 12px 24px;
+    font-size: 20px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background: #FEF6F0;
+    margin-bottom: 8px;
+    border-radius: 12px;
+    border: 2px solid #CAC7B1;
+}
+
+.task-item.done {
+    opacity: 0.7;
+}
+
+.task-item .task-text {
+    flex: 1;
+    cursor: pointer;
+}
+
+.task-actions button {
+    margin-left: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.daily-notes textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px;
+    border: 2px solid #CAC7B1;
+    border-radius: 12px;
+    font-family: 'Pixelify Sans';
+    resize: vertical;
+}
+
+.history-page {
+    padding: 32px;
+}
+
+.history-entry {
+    background: #FEF6F0;
+    padding: 16px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    border: 2px solid #CAC7B1;
+}
