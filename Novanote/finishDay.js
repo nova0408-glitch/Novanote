@@ -1,30 +1,33 @@
-const day = new Date();
-const todayKey = day.toISOString().split('T')[0];
-let finalConclusion = Number(localStorage.getItem(`progress-${todayKey}`));
+const todayKey = new Date().toISOString().split('T')[0];
 
-const success = document.getElementById("successTasks");
-const unsuccess = document.getElementById("unsuccessTasks");
-const title = document.getElementById("final-title");
-const conclusion = document.getElementById("conclusion");
+async function init() {
+  const data = await window.electronAPI.loadDay(todayKey);
+  const progress = data && data.tasks ? 
+    (data.tasks.filter(t => t.done).length / data.tasks.length * 100) || 0 : 0;
 
-console.log("Final Progress:", finalConclusion);
-console.log("Type of finalProgress:", typeof finalConclusion);
+  const title = document.getElementById("final-title");
+  const emoji = document.getElementById("emoji-result");
+  const conclusion = document.getElementById("conclusion");
 
-// Handle invalid/NaN (e.g., no tasks)
-if (isNaN(finalConclusion)) {
-    finalConclusion = 0;
-    console.log("Invalid final progress value; setting to 0");
+  if (progress >= 100) {
+    title.textContent = "Amazing Day!";
+    emoji.textContent = "🌟";
+  } else if (progress >= 70) {
+    title.textContent = "Great Job!";
+    emoji.textContent = "👍";
+  } else if (progress >= 40) {
+    title.textContent = "Good Effort!";
+    emoji.textContent = "🙂";
+  } else {
+    title.textContent = "Keep Going!";
+    emoji.textContent = "🌱";
+  }
+
+  conclusion.textContent = `Progress: ${Math.round(progress)}% • ${data?.tasks?.length || 0} tasks completed`;
 }
 
-if (finalConclusion === 100) {
-    success.removeAttribute("hidden"); 
-    title.innerHTML = "You're doing good!";
-} else {
-    unsuccess.removeAttribute("hidden"); 
-    title.innerHTML = "Keep going!";
-}
-conclusion.innerText = `Your final progress: ${Math.round(finalConclusion)}%`;
+document.getElementById("restart-btn").addEventListener("click", () => {
+  window.electronAPI.loadPage("index.html");
+});
 
-// Restart button functionality
-const restartBtn = document.getElementById("restart-btn");
-restartBtn.addEventListener("click", () => { window.electronAPI.loadPage("index.html"); });
+init();
