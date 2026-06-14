@@ -1,5 +1,5 @@
 # 🌱 Novanote
-
+![Novanote Screenshot](novanote.png)<br>
 **A clean, motivational daily planner & journaling desktop app** built with Electron.
 
 Novanote helps you stay focused and intentional every day by combining task management, daily reflections, progress tracking, and a personal history log — all with a beautiful pixel-art aesthetic.
